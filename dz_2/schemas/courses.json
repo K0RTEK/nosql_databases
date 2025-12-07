@@ -1,0 +1,36 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "title",
+      "code",
+      "credits",
+      "course_id",
+      "description"
+    ],
+    "properties": {
+      "title": {
+        "bsonType": "string",
+        "description": "должно быть строкой и обязательно для заполнения"
+      },
+      "code": {
+        "bsonType": "string",
+        "description": "уникальный код курса (например, CS-305), должно быть строкой и обязательно для заполнения"
+      },
+      "credits": {
+        "bsonType": "int",
+        "minimum": 1,
+        "maximum": 10,
+        "description": "количество учебных кредитов, должно быть целым числом от 1 до 10"
+      },
+      "course_id": {
+        "bsonType": "int",
+        "description": "идентификатор факультета, должно быть целым числом и обязательно для заполнения"
+      },
+      "description": {
+        "bsonType": "string",
+        "description": "краткое описание курса, должно быть строкой и обязательно для заполнения"
+      }
+    }
+  }
+}

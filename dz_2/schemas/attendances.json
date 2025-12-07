@@ -1,0 +1,34 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "student_id",
+      "course_id",
+      "date",
+      "status"
+    ],
+    "properties": {
+      "student_id": {
+        "bsonType": "int",
+        "description": "идентификатор студента, должно быть целым числом и обязательно для заполнения"
+      },
+      "course_id": {
+        "bsonType": "int",
+        "description": "идентификатор курса, должно быть целым числом и обязательно для заполнения"
+      },
+      "date": {
+        "bsonType": "date",
+        "description": "дата занятия, должно быть объектом даты и обязательно для заполнения"
+      },
+      "status": {
+        "enum": [
+          "present",
+          "absent",
+          "late",
+          "excused"
+        ],
+        "description": "статус посещения: 'present' (присутствовал), 'absent' (отсутствовал), 'late' (опоздал), 'excused' (уважительная причина)"
+      }
+    }
+  }
+}

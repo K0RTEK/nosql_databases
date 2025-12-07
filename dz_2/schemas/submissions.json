@@ -1,0 +1,52 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "student_id",
+      "course_id",
+      "assignment_id",
+      "submitted_at"
+    ],
+    "properties": {
+      "student_id": {
+        "bsonType": "int",
+        "description": "идентификатор студента, целое число"
+      },
+      "course_id": {
+        "bsonType": "int",
+        "description": "идентификатор курса, целое число"
+      },
+      "assignment_id": {
+        "bsonType": "int",
+        "description": "идентификатор домашнего задания, целое число"
+      },
+      "submitted_at": {
+        "bsonType": "date",
+        "description": "дата и время сдачи работы"
+      },
+      "status": {
+        "enum": [
+          "submitted",
+          "late",
+          "not_submitted",
+          "reviewed"
+        ],
+        "description": "статус сдачи: сдано, просрочено, не сдано, проверено"
+      },
+      "grade": {
+        "bsonType": "int",
+        "minimum": 2,
+        "maximum": 5,
+        "description": "оценка за задание (может быть null/отсутствовать)"
+      },
+      "feedback": {
+        "bsonType": "string",
+        "description": "комментарий преподавателя (необязательно)"
+      },
+      "file_url": {
+        "bsonType": "string",
+        "description": "ссылка на файл с решением (необязательно)"
+      }
+    }
+  }
+}

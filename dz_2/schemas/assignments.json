@@ -1,0 +1,38 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "course_id",
+      "title",
+      "description",
+      "deadline"
+    ],
+    "properties": {
+      "course_id": {
+        "bsonType": "int",
+        "description": "идентификатор курса, целое число"
+      },
+      "title": {
+        "bsonType": "string",
+        "description": "название домашнего задания"
+      },
+      "description": {
+        "bsonType": "string",
+        "description": "полное описание задания"
+      },
+      "deadline": {
+        "bsonType": "date",
+        "description": "дедлайн сдачи (дата и время)"
+      },
+      "max_score": {
+        "bsonType": "int",
+        "minimum": 1,
+        "description": "максимальный балл за задание (необязательно, если используете 5-балльную шкалу)"
+      },
+      "published_at": {
+        "bsonType": "date",
+        "description": "дата публикации задания"
+      }
+    }
+  }
+}

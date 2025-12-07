@@ -1,0 +1,36 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "name",
+      "surname",
+      "age",
+      "email",
+      "course_id",
+      "university_course_id"
+    ],
+    "properties": {
+      "name": {
+        "bsonType": "string",
+        "description": "must be a string and is required"
+      },
+      "surname": {
+        "bsonType": "string",
+        "description": "must be a string and is required"
+      },
+      "age": {
+        "bsonType": "int",
+        "description": "must be a integer and is required"
+      },
+      "email": {
+        "bsonType": "string",
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "description": "must be a valid email address"
+      },
+      "course_id": {
+        "bsonType": "int",
+        "description": "must be a integer and is required"
+      }
+    }
+  }
+}

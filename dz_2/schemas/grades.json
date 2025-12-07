@@ -1,0 +1,31 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "student_id",
+      "course_id",
+      "grade",
+      "date"
+    ],
+    "properties": {
+      "student_id": {
+        "bsonType": "int",
+        "description": "идентификатор студента, должно быть целым числом и обязательно для заполнения"
+      },
+      "course_id": {
+        "bsonType": "int",
+        "description": "идентификатор курса, должно быть целым числом и обязательно для заполнения"
+      },
+      "grade": {
+        "bsonType": "int",
+        "minimum": 2,
+        "maximum": 5,
+        "description": "оценка по пятибалльной шкале (от 2 до 5), обязательно для заполнения"
+      },
+      "date": {
+        "bsonType": "date",
+        "description": "дата выставления оценки, должно быть объектом даты и обязательно для заполнения"
+      }
+    }
+  }
+}
