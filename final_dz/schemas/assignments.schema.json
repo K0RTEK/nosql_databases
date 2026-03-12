@@ -1,0 +1,15 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["assignment_id", "course_id", "title", "description", "deadline"],
+    "properties": {
+      "assignment_id": {"bsonType": "int"},
+      "course_id": {"bsonType": "int"},
+      "title": {"bsonType": "string"},
+      "description": {"bsonType": "string"},
+      "deadline": {"bsonType": "date"},
+      "max_score": {"bsonType": "int", "minimum": 1},
+      "published_at": {"bsonType": "date"}
+    }
+  }
+}

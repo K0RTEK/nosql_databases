@@ -1,0 +1,12 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["student_id", "course_id", "grade", "date"],
+    "properties": {
+      "student_id": {"bsonType": "int"},
+      "course_id": {"bsonType": "int"},
+      "grade": {"bsonType": "int", "minimum": 2, "maximum": 5},
+      "date": {"bsonType": "date"}
+    }
+  }
+}

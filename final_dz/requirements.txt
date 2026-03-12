@@ -1,0 +1,5 @@
+pymongo==4.11.1
+faker==37.0.0
+matplotlib==3.10.1
+pandas==2.2.3
+python-dotenv==1.0.1
