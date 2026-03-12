@@ -26,16 +26,16 @@ def main():
                 validationLevel="strict",
                 validationAction="error",
             )
-            print(f"[OK] created {collection_name}")
+            print(f"[OK] создана коллекция {collection_name}")
         except CollectionInvalid:
-            print(f"[SKIP] {collection_name} already exists")
+            print(f"[SKIP] {collection_name} уже существует")
             db.command({
                 "collMod": collection_name,
                 "validator": schema,
                 "validationLevel": "strict",
                 "validationAction": "error",
             })
-            print(f"[OK] updated validator for {collection_name}")
+            print(f"[OK] обновлен валидатор для {collection_name}")
 
 
 if __name__ == "__main__":

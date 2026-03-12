@@ -20,7 +20,7 @@ def main():
     db.grades.create_index([("student_id", 1), ("course_id", 1), ("date", -1)])
     db.attendances.create_index([("course_id", 1), ("student_id", 1), ("date", -1)])
 
-    print("[OK] indexes created")
+    print("[OK] индексы созданы")
 
 
 if __name__ == "__main__":

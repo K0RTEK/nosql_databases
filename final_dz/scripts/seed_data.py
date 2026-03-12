@@ -40,7 +40,7 @@ def main():
     db.grades.insert_many(grades)
     db.attendances.insert_many(attendances)
 
-    print("[OK] sample data inserted")
+    print("[OK] тестовые данные вставлены")
     print(f"students: {len(students)}")
     print(f"courses: {len(courses)}")
     print(f"assignments: {len(assignments)}")

@@ -3,7 +3,7 @@ from app.db import get_db
 
 
 def menu() -> str:
-    print("\n=== University Mongo CLI ===")
+    print("\n=== Mongo CLI ===")
     print("1. Показать 5 студентов")
     print("2. Найти студента по email")
     print("3. Показать курсы")

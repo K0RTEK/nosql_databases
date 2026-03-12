@@ -1,4 +1,3 @@
-version: '3.9'
 services:
   configsvr:
     image: mongo:7.0
@@ -24,10 +23,16 @@ services:
   mongos:
     image: mongo:7.0
     container_name: mongos
+    command:
+      [
+        "mongos",
+        "--configdb", "cfgReplSet/configsvr:27019",
+        "--port", "27017",
+        "--bind_ip_all"
+      ]
+    ports:
+      - "27020:27017"
     depends_on:
       - configsvr
       - shard1
       - shard2
-    command: ["mongos", "--configdb", "cfgReplSet/configsvr:27019", "--bind_ip_all", "--port", "27017"]
-    ports:
-      - "27017:27017"

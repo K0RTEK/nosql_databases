@@ -86,16 +86,16 @@ def main():
 
     plt.figure(figsize=(10, 6))
     plt.hist(latencies, bins=30)
-    plt.xlabel("Latency (sec)")
-    plt.ylabel("Count")
-    plt.title("Load test latency distribution")
+    plt.xlabel("Задержка (сек)")
+    plt.ylabel("Количество")
+    plt.title("Распределение задержек при нагрузочном тестировании")
     plt.tight_layout()
     plt.savefig(out_dir / "latency_histogram.png", dpi=150)
 
     print(summary.to_string(index=False))
-    print(f"\nTotal time: {total_time:.4f} sec")
-    print(f"Throughput: {throughput:.2f} ops/sec")
-    print(f"Results saved in: {out_dir}")
+    print(f"\nОбщее время выполнения теста: {total_time:.4f} сек")
+    print(f"Производительность (throughput): {throughput:.2f} операций/сек")
+    print(f"Файлы с результатами сохранены в каталоге: {out_dir}")
 
 
 if __name__ == "__main__":
